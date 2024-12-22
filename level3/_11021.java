@@ -1,7 +1,8 @@
-import java.io.*;
-import java.util.*;
+package level3;
 
-public class Main {
+import java.util.Scanner;
+
+public class _11021 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int n = sc.nextInt();
