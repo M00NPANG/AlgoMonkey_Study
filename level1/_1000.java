@@ -1,3 +1,5 @@
+package level1;
+
 import java.util.Scanner;
 
 public class _1000 {
