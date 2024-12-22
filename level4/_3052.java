@@ -1,6 +1,10 @@
-import java.util.*;
+package level4;
 
-public class Main {
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class _3052 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
 
