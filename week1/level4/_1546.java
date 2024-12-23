@@ -1,6 +1,8 @@
-import java.util.*;
+package week1.level4;
 
-public class Main {
+import java.util.Scanner;
+
+public class _1546 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
 
