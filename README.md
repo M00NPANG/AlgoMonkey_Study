@@ -22,6 +22,6 @@ $ git fetch upstream
 ## ✏️ Solved List
 |Week|Algorithm|Question1|Question2|Question3|Question4|Question5|
 |------|---|---|---|---|---|---|
-|2024.12.20|입문| [BOJ 단계별](https://www.acmicpc.net/step) |           |           |             |           |
-|2024.12.23|해시|[PG 포켓몬](https://school.programmers.co.kr/learn/courses/30/lessons/1845)|[PG 완주하지 못 한 선수](https://school.programmers.co.kr/learn/courses/30/lessons/42576)|[PG 전화번호 목록](https://school.programmers.co.kr/learn/courses/30/lessons/42577)|[PG 의상](https://school.programmers.co.kr/learn/courses/30/lessons/42578)|[PG 베스트 앨범](https://school.programmers.co.kr/learn/courses/30/lessons/42579)|
-|테스트1|테스트2|테스트3|테스트4|테스트5|테스트6||
+|2024.12.20|입문| [단계별](https://www.acmicpc.net/step) |           |           |             |           |
+|2024.12.23|해시|[포켓몬](https://school.programmers.co.kr/learn/courses/30/lessons/1845)|[완주하지 못 한 선수](https://school.programmers.co.kr/learn/courses/30/lessons/42576)|[전화번호 목록](https://school.programmers.co.kr/learn/courses/30/lessons/42577)|[의상](https://school.programmers.co.kr/learn/courses/30/lessons/42578)|[베스트 앨범](https://school.programmers.co.kr/learn/courses/30/lessons/42579)|
+|2024.12.30|스택/큐|[같은 숫자는 싫어](https://school.programmers.co.kr/learn/courses/30/lessons/12906)|[기능개발](https://school.programmers.co.kr/learn/courses/30/lessons/42586)|[올바른 괄호](https://school.programmers.co.kr/learn/courses/30/lessons/12909)|[프로세스](https://school.programmers.co.kr/learn/courses/30/lessons/42587)|[다리를 지나는 트럭](https://school.programmers.co.kr/learn/courses/30/lessons/42583)|
