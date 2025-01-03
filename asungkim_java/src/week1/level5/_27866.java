@@ -1,6 +1,8 @@
-import java.util.*;
+package week1.level5;
 
-public class Main {
+import java.util.Scanner;
+
+public class _27866 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         String s=sc.nextLine();
