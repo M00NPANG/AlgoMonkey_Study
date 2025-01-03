@@ -1,14 +1,13 @@
-import java.util.*;
+package baekjoon.level5;
 
-public class Main {
+import java.util.Scanner;
+
+public class _27866 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         String s=sc.nextLine();
         int i=sc.nextInt();
 
-        System.out.println(s);
-        System.out.println(i);
-
-
+        System.out.println(s.charAt(i-1));
     }
 }
