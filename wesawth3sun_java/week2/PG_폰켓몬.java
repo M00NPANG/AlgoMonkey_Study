@@ -1,6 +1,8 @@
+package week2;
+
 import java.util.HashSet;
 
-public class Test1 {
+public class PG_폰켓몬 {
 
     public static void main(String[] args) {
         int[] nums = {3, 1, 2, 3};
