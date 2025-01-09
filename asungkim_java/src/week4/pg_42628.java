@@ -16,8 +16,6 @@ public class pg_42628 {
         PriorityQueue<Integer> minQ=new PriorityQueue<>(); // 최소 - 최대
         PriorityQueue<Integer> maxQ=new PriorityQueue<>(Collections.reverseOrder());
 
-
-
         for (String cmd : operations) {
             String[] cmdBits=cmd.split(" ");
             int num=Integer.parseInt(cmdBits[1]);
