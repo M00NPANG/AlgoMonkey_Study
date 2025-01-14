@@ -24,43 +24,43 @@ public class pg_42627 {
 
     public int solution(int[][] jobs) {
         int answer = 0;
-        PriorityQueue<Disk> waitQ=
-                new PriorityQueue<>(Comparator.comparingInt(d->d.needTime));
-        int curTime=0;
-        int turnTime=0;
-        int n=jobs.length;
+        PriorityQueue<Disk> waitQ =
+                new PriorityQueue<>(Comparator.comparingInt(d -> d.needTime));
+        int curTime = 0;
+        int turnTime = 0;
+        int n = jobs.length;
 
-        Arrays.sort(jobs,(s1, s2)->s1[0]-s2[0]);
-        int cnt=0;
-        int idx=0;
+        Arrays.sort(jobs, (s1, s2) -> s1[0] - s2[0]);
+        int cnt = 0;
+        int idx = 0;
 
         // n개의 작업이 끝나야 종료
-        while (cnt<n) {
+        while (cnt < n) {
 
             // 대기큐에 추가하는 상황
             while (true) {
-                if (idx>=n||jobs[idx][0]>curTime) {
+                if (idx >= n || jobs[idx][0] > curTime) {
                     break;
                 }
-                waitQ.add(new Disk(jobs[idx][0],jobs[idx][1]));
+                waitQ.add(new Disk(jobs[idx][0], jobs[idx][1]));
                 idx++;
             }
 
 
             // 비어있지 않으면 작업 시작
             if (!waitQ.isEmpty()) {
-                Disk task=waitQ.poll();
-                curTime+=task.needTime;
-                turnTime+=(curTime-task.reqTime);
+                Disk task = waitQ.poll();
+                curTime += task.needTime;
+                turnTime += (curTime - task.reqTime);
                 cnt++;
             }
             // 현재까지 소요된 시간을 다음 reqTime으로 갱신
             else {
-                curTime=jobs[idx][0];
+                curTime = jobs[idx][0];
             }
         }
 
-        answer= turnTime/n;
+        answer = turnTime / n;
         return answer;
     }
 
@@ -70,9 +70,9 @@ public class pg_42627 {
         private int needTime;
 
 
-        public Disk(int reqTime,int needTime) {
-            this.reqTime=reqTime;
-            this.needTime=needTime;
+        public Disk(int reqTime, int needTime) {
+            this.reqTime = reqTime;
+            this.needTime = needTime;
         }
     }
 

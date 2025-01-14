@@ -13,24 +13,22 @@ public class pg_42628 {
     public int[] solution(String[] operations) {
         int[] answer = new int[2];
 
-        PriorityQueue<Integer> minQ=new PriorityQueue<>(); // 최소 - 최대
-        PriorityQueue<Integer> maxQ=new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> minQ = new PriorityQueue<>(); // 최소 - 최대
+        PriorityQueue<Integer> maxQ = new PriorityQueue<>(Collections.reverseOrder());
 
         for (String cmd : operations) {
-            String[] cmdBits=cmd.split(" ");
-            int num=Integer.parseInt(cmdBits[1]);
+            String[] cmdBits = cmd.split(" ");
+            int num = Integer.parseInt(cmdBits[1]);
             if (cmdBits[0].equals("D")) {
 
-                if (num==1 &&!maxQ.isEmpty()) {
+                if (num == 1 && !maxQ.isEmpty()) {
                     // 최댓값 삭제
                     minQ.remove(maxQ.poll());
-                }
-                else if(num==-1&&!minQ.isEmpty()) {
+                } else if (num == -1 && !minQ.isEmpty()) {
                     // 최솟값 삭제
                     maxQ.remove(minQ.poll());
                 }
-            }
-            else {
+            } else {
                 minQ.add(num);
                 maxQ.add(num);
             }
@@ -38,11 +36,11 @@ public class pg_42628 {
 
 
         if (minQ.isEmpty() && maxQ.isEmpty()) {
-            return new int[]{0,0};
+            return new int[]{0, 0};
         }
 
 
-        answer=new int[]{maxQ.poll(),minQ.poll()};
+        answer = new int[]{maxQ.poll(), minQ.poll()};
         return answer;
     }
 
