@@ -2,7 +2,7 @@ package Week7;
 
 import java.util.Stack;
 
-public class PG_42860 {
+public class PG_42883 {
 
     public String solution(String number, int k) {
 
@@ -22,16 +22,16 @@ public class PG_42860 {
             popCount++;
         }
 
-        StringBuilder sb = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
         for (Character c : stack) {
-            sb.append(c);
+            stringBuilder.append(c);
         }
 
-        return sb.toString();
+        return stringBuilder.toString();
     }
 
     public static void main(String[] args) {
-        PG_42860 pg42860 = new PG_42860();
+        PG_42883 pg42860 = new PG_42883();
         String solution = pg42860.solution("9420", 2);
         System.out.println("solution = " + solution);
     }
