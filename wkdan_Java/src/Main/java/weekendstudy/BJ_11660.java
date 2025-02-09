@@ -36,7 +36,7 @@ public class BJ_11660 {
             int y2 = Integer.parseInt(st.nextToken());
 
             answer = sum[x2][y2] - sum[x1-1][y2] - sum[x2][y1-1] + sum[x1-1][y1-1];
-            // sum 배열의 x2,y2까지 누적합을 받아와서 1,1에서 x1, y1 부분 구간 빼주고 중복해서 빠진 구간 더해줌
+            // sum 배열의 x2,y2까지 누적합을 받아와서 1,1에서 x1, y1 부분 구간 빼주고 중복해서 빠진`1 구간 더해줌
             bw.write(answer + "\n");
         }
         bw.flush();
