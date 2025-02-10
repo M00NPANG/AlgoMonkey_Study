@@ -11,7 +11,6 @@ public class PG_42860 {
             // 알파벳 변경 횟수 계산
             answer += Math.min(name.charAt(i) - 'A', 'Z' - name.charAt(i) + 1);
 
-            // 커서 이동 횟수 계산
             int next = i + 1;
             while (next < length && name.charAt(next) == 'A') {
                 next++;
