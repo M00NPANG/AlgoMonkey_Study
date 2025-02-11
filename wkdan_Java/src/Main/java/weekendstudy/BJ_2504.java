@@ -1,4 +1,4 @@
-package weekendstudy.first;
+package weekendstudy;
 
 import java.io.*;
 import java.util.Stack;
