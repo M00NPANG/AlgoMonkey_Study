@@ -10,6 +10,7 @@ public class pg_84512 {
      * 2. dfs 함수는 빈 문자열이 depth 길이가 되면 list에 담는다.
      * 3. 그리고 alp에 있는 경우를 for문을 통해 tmp문자열에 추가해줌
      * 4. list를 순회하여 word 문자열인 경우의 idx값에 1을 더하여 answerd에 담아주고 리턴
+     *
      */
 
     private static List<String> list;
