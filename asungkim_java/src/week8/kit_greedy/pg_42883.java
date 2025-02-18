@@ -1,4 +1,4 @@
-package week7.kit_greedy;
+package week8.kit_greedy;
 
 import java.util.Stack;
 
