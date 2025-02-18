@@ -12,14 +12,14 @@ public class pg_42883 {
      * 3. k값이 0보다 작을 때
      */
     public String solution(String number, int k) {
-        Stack<Character> st=new Stack<>();
+        Stack<Character> st = new Stack<>();
 
-        for (int i=0;i<number.length();i++) {
-            char c=number.charAt(i);
+        for (int i = 0; i < number.length(); i++) {
+            char c = number.charAt(i);
             while (true) {
                 if (st.isEmpty()) break;
-                if (st.peek()>=c) break;
-                if (k<=0) break;
+                if (st.peek() >= c) break;
+                if (k <= 0) break;
 
                 st.pop();
                 k--;
@@ -29,12 +29,12 @@ public class pg_42883 {
 
         // 뒤에 남은 숫자를 제거시켜준다
         while (true) {
-            if (k<=0) break;
+            if (k <= 0) break;
             st.pop();
             k--;
         }
 
-        StringBuilder sb=new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         for (char c : st) {
             sb.append(c);
         }
