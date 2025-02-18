@@ -58,12 +58,14 @@ public class pg_42861 {
 //        }
 //    }
 
+
     static boolean[] visited;
+
     public int solution(int n, int[][] costs) {
         // n이 100이하이므로 2차원 배열 사용
         int[][] graph = new int[n][n];
 
-        visited=new boolean[n];
+        visited = new boolean[n];
 
         // 그래프 초기화 (-1은 연결되지 않은 상태)
         // 빈 값을 체크하기위해
@@ -79,40 +81,40 @@ public class pg_42861 {
             graph[to][from] = cost;
         }
 
-        return prim(n,graph);
+        return prim(n, graph);
 
 
     }
 
     // bfs와 유사 bfs는 너비 탐색을 통해 최단거리를 탐색하지만
     // 프림은 우선순위큐를 활용해서 최소 간선 비용을 구한다
-    private int prim(int n,int[][] graph) {
+    private int prim(int n, int[][] graph) {
 
         // 우선순위큐에 들어가는 int[] 배열은 {목적지,비용} 순으로 배열이 들어간다
-        PriorityQueue<int[]> pq=
-                new PriorityQueue<>((a,b)->a[1]-b[1]);
+        PriorityQueue<int[]> pq =
+                new PriorityQueue<>((a, b) -> a[1] - b[1]);
 
         // 초기값 설정 (0번 점,비용 0)
-        pq.add(new int[]{0,0});
+        pq.add(new int[]{0, 0});
 
         // 리턴할 최소 간선 비용
-        int minCost=0;
+        int minCost = 0;
 
         // bfs 와 유사한 구조
         while (!pq.isEmpty()) {
-            int[] cur=pq.poll();
-            int curTo=cur[0];
-            int curCost=cur[1];
+            int[] cur = pq.poll();
+            int curTo = cur[0];
+            int curCost = cur[1];
 
             // 가려는 곳이 방문했으면 패스
             if (visited[curTo]) continue;
-            visited[curTo]=true;
-            minCost+=curCost;
+            visited[curTo] = true;
+            minCost += curCost;
 
-            for (int next=0;next<n;next++) {
+            for (int next = 0; next < n; next++) {
                 // 방문하지 않았고, 빈 배열이 아니라면(-1이면 빈 값이다)
-                if (!visited[next] && graph[curTo][next]!=-1) {
-                    pq.offer(new int[]{next,graph[curTo][next]});
+                if (!visited[next] && graph[curTo][next] != -1) {
+                    pq.offer(new int[]{next, graph[curTo][next]});
                 }
             }
         }
