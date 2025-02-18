@@ -25,7 +25,6 @@ public class PG_42883 {
 
         for(Character digit : stack) sb.append(digit);
 
-
         return sb.toString();
     }
 
