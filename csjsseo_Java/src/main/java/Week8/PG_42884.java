@@ -13,7 +13,7 @@ public class PG_42884 {
         int camera = -30000;
 
         for(int [] route : routes){
-            if(camera < route[0]){
+            if(camera < route[0]) {
                 camera = route[1];
                 count++;
             }
